@@ -23,10 +23,8 @@ with open("pdfExtract.txt","r",encoding="utf-8") as file:
     fileLines = file.read()
     pattern = re.compile("[A-Z]{3} [0-9]{3}[A-Z]* —\xa0.+\)")
     matches = pattern.findall(fileLines)
-    print(matches)
     for match in matches:
         filter.write(match+"\n")
-        # output.write(match.group(1) + "," + match.group(2) + "," + match.group(3) + ",")
 filter.close()
 
 array = []
